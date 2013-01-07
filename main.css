@@ -1,0 +1,217 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1680px;
+    background-color: bisque;
+    background: -webkit-radial-gradient(center, bisque, salmon);
+    background-image: -webkit-radial-gradient(center, rgba(248,213,183,0.8), rgba(255,204,153,0.8)), url(http://sphotos-h.ak.fbcdn.net/hphotos-ak-ash4/332689_754442644464_1595180194_o.jpg);
+    background-position: 0 -200px;
+    background-repeat: no-repeat;
+    background-size: 100% 1600px, 3000px;
+    background-attachment: fixed;
+}
+
+body {
+    text-align: center;
+}
+
+.navbar {
+    padding-top: 5px;
+    font-family: alex-brush, "Cinzel Decorative";
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar > ul > li{
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: -1px -1px 0px rgba(150,150,150,0.6), 0px 0px 50px white;
+    color: rgba(0,0,0,0.7);
+    display: inline;
+    list-style-type: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    opacity: 0.9;
+    -webkit-animation: blurIn 1s;
+    -webkit-transition: -webkit-transform 500ms, color 300ms;
+}
+
+a {
+    color: black;
+}
+
+:link, :visited, :active {
+    -webkit-transition: inherit;
+    text-decoration: none;
+}
+
+.navbar > ul > li:hover, .navbar > ul > li > a:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+.slider {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    opacity: 0.9;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slider > div {
+    position: relative;
+    display: block;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.slider > div > img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -20%;
+    opacity: 0;
+    -webkit-transition: opacity 3s;
+}
+
+.slider:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background: -webkit-linear-gradient(left, black 20%, transparent, black 80%);
+    z-index: 1;
+}
+
+.content {
+    width: 75%;
+    margin: auto;
+    padding: 20px;
+}
+
+.content > .story {
+    font-family: alexa-std, dynalight;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    width: 75%;
+    margin: auto;
+}
+
+.content > .story > p {
+    margin-bottom: 3em;
+}
+
+.content > .story > p:first-letter {
+    font-size: 4em;
+}
+
+.content > .story > h2 {
+    font-family: monsieur-la-doulaise;
+    font-size: 4em;
+    font-weight: 100;
+    text-shadow: 0 0 20px white, 0 0 20px white, -1px -1px 1px white;
+    padding: 1em;
+}
+
+.content > .story > h2:first-letter {
+    font-size: 140%;
+}
+
+.activeimg {
+    opacity: 1 !important;
+}
+
+.navbar > ul > li:nth-of-type(2) {
+    -webkit-animation-duration: 1500ms;
+}
+
+.navbar > ul > li:nth-of-type(3) {
+    -webkit-animation-duration: 2000ms;
+}
+
+.navbar > ul > li:nth-of-type(4) {
+    -webkit-animation-duration: 2500ms;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+@-webkit-keyframes blurIn {
+    from{color: transparent; text-shadow: 0 0 50px black;}
+    99% {color: transparent;}
+    to{color: black; text-shadow: 0 0 0 black;}
+}
+
+.timelineslider {
+    margin: auto;
+    width: 1200px;
+    height: 500px;
+    overflow: hidden;
+}
+
+div[class*=move] {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    height: 100%;
+    width: 200px;
+    opacity: 0.5;
+}
+
+div.moveleft {
+    background-image: url(./images/pointer_left.png);
+    background-size: 100% 100%;
+}
+
+div.moveright {
+    background-image: url(./images/pointer_right.png);
+    background-size: 100% 100%;
+}
+
+.timelinephotos {
+    display: inline-block;
+    height: 100%;
+    width: 600px;
+    max-width: 600px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.timelinephotos li {
+    position: relative;
+    right: 0px;
+    width: 600px;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-transition: right 1s;
+}
+
+.timelineslider li img {
+    height: 100%;
+}
+
+.timelinephotos li i {
+    position: absolute;
+    text-align: center;
+    font-family:serif;
+    font-size: 18px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.4);
+}
